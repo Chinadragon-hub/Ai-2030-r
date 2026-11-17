@@ -1,0 +1,6 @@
+{
+  "name": "AI in 2030 — 3D Cinematic Presentation",
+  "description": "A 5-minute interactive 3D Three.js presentation on AI in 2030 by Louay Kouki and Mahmoud Dammek, featuring AI guide Julia, audience teleprompter, Web Audio cues, and PDF script export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

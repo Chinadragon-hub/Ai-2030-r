@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --cyber-yellow: #fcee0a;
+    --cyber-cyan: #00f0ff;
+    --cyber-magenta: #ff2a6d;
+    --cyber-bg: #0b0c1a;
+  }
+
+  html,
+  body,
+  #app {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0b0c1a;
+    font-family: "Rajdhani", system-ui, -apple-system, sans-serif;
+    color: #f8fafc;
+  }
+}
+
+.font-display {
+  font-family: "Orbitron", system-ui, sans-serif;
+}
+
+.font-body {
+  font-family: "Rajdhani", system-ui, sans-serif;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.glow-cyan {
+  text-shadow: 0 0 14px rgba(0, 240, 255, 0.55);
+}
+
+.glow-yellow {
+  text-shadow: 0 0 14px rgba(252, 238, 10, 0.55);
+}
+
+.glow-magenta {
+  text-shadow: 0 0 14px rgba(255, 42, 109, 0.6);
+}
+
+@keyframes juliaWaveRing {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.65);
+    opacity: 0;
+  }
+}
+
+@keyframes juliaBar {
+  0%,
+  100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.julia-wave-ring {
+  animation: juliaWaveRing 1.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.julia-wave-ring-delay {
+  animation: juliaWaveRing 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.9s infinite;
+}
+
+.julia-eq-bar {
+  animation: juliaBar 0.65s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .julia-wave-ring,
+  .julia-wave-ring-delay,
+  .julia-eq-bar {
+    animation: none;
+  }
+}
